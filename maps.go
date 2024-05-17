@@ -2,16 +2,21 @@ package main
 
 import "fmt"
 
+type floatMap = map[string]float64
+
 func main() {
 	userNames := make([]string, 0, 5)
 
-	fmt.Println(len(userNames), cap(userNames))
 	userNames = append(userNames, "max")
 	userNames = append(userNames, "manuel")
 	fmt.Println(userNames)
 
-	fmt.Println(len(userNames), cap(userNames))
-	fmt.Println(userNames)
+	courseRatings := make(floatMap)
+
+	courseRatings["go"] = 4.7
+	courseRatings["react"] = 4.8
+
+	fmt.Println(courseRatings)
 
 }
 
