@@ -3,18 +3,16 @@ package main
 import "fmt"
 
 func main() {
-	var google, aws string
-	websites := map[*string]string{
-		&google: "https://google.com",
-		&aws:    "https://aws.com",
+	websites := map[string]string{
+		"Google":              "https://google.com",
+		"Amazon Web Services": "https://aws.com",
 	}
 	fmt.Println(websites)
-	fmt.Println(websites[&google])
+	fmt.Println(websites["Amazon Web Services"])
 
-	var linkedIn string
-	websites[&linkedIn] = "https://linkedin.com"
+	websites["LinkedIn"] = "https://linkedin.com"
 	fmt.Println(websites)
 
-	delete(websites, &google)
+	delete(websites, "Google")
 	fmt.Println(websites)
 }
