@@ -15,9 +15,16 @@ func main() {
 
 	courseRatings["go"] = 4.7
 	courseRatings["react"] = 4.8
-
+	loop(courseRatings)
 	fmt.Println(courseRatings)
 
+}
+
+func loop[T comparable, K any](itemToLoop map[T]K) {
+	for index, value := range itemToLoop {
+		fmt.Println("Index: ", index)
+		fmt.Println("Value: ", value)
+	}
 }
 
 func mapTesting() {
